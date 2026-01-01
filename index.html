@@ -18,11 +18,24 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Practica DOM</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <button class="btn btn-"><i class="bi bi-circle-half"></i>Cambiar de tema</button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <button class="btn btn-">
+              <i class="bi bi-circle-half"></i>Cambiar de tema
+            </button>
           </div>
         </div>
       </nav>
@@ -30,27 +43,93 @@
     <main class="container">
       <section class="my-4 text-center">
         <h1 class="display-4">Introducción al DOM con JavaScript</h1>
-        <p class="lead">El DOM es una representación del HTML como objetos de JavaScript. Nos permite modificar elementos en la pagina mientras se ejecuta</p>
+        <p class="lead">
+          El DOM es una representación del HTML como objetos de JavaScript. Nos
+          permite modificar elementos en la pagina mientras se ejecuta
+        </p>
       </section>
       <section>
         <h2>Seleccion de elementos</h2>
         <p>Metodos del elemeneto document</p>
         <ul>
           <li><code>getElementById('id')</code> -> selecciona por ID</li>
-          <li><code>getElementByClassName('clase')</code> -> selecciona por clase</li>
-          <li><code>getElementByTagname('tag')</code> -> devuelve por tipo de etiquetas</li>
-          <li><code>getElementByTagname('tag')</code> -> devuelve el primer elemento que coincide</li>
-          <li><code>querySelectoAll('selector')</code> -> devuelve todos los que coinciden</li>
+          <li>
+            <code>getElementByClassName('clase')</code> -> selecciona por clase
+          </li>
+          <li>
+            <code>getElementByTagname('tag')</code> -> devuelve por tipo de
+            etiquetas
+          </li>
+          <li>
+            <code>getElementByTagname('tag')</code> -> devuelve el primer
+            elemento que coincide
+          </li>
+          <li>
+            <code>querySelectoAll('selector')</code> -> devuelve todos los que
+            coinciden
+          </li>
         </ul>
         <h3>Modificar contenido</h3>
         <ul>
           <li><code>textContent</code> agrega un texto plano (más seguro)</li>
-          <li><code>innerHTML</code> interpreta HTML (vulnerable a xss si no se controla)</li>
+          <li>
+            <code>innerHTML</code> interpreta HTML (vulnerable a xss si no se
+            controla)
+          </li>
         </ul>
         <h3>Manipular clases con classList</h3>
-        <p><code>classList</code> es una propiedad de los elementos DOM que permite trabajar facilmente con las clases CSS. Dvuelve un objeto con metodos utiles</p>
+        <p>
+          <code>classList</code> es una propiedad de los elementos DOM que
+          permite trabajar facilmente con las clases CSS. Dvuelve un objeto con
+          metodos utiles
+        </p>
       </section>
       <!--TODO: Agrgar los etodos de classList-->
+      <section class="my-4">
+        <h2 class="display-5 text-center">Practica de DOM</h2>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Hola Mundo</h5>
+                <button class="btn btn-warning w-100 mt-3">Cambiar titulo</button>
+                <button class="btn btn-outline-warning w-100 mt-3">Cambiar titulo con innerHTML</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">ocultar elementos del HTML</h5>
+                <button class="btn btn-success w-100 mt-3">Ocultar texto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">eliminar elementos del HTML</h5>
+                <button class="btn btn-danger w-100 mt-3">Borrar titulo</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-lael">Escribí tu nombre</label>
+                    <input type="text" class="form-control" placeholder="Ej: Maximo Cajal" minlength="2" maxlength="30" required id="nombre">
+                  </div>
+                  <button class="btn btn-primary mb-3 w-100">Mostrar nombre</button>
+                  <p>tu nombre es: </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="bg-dark-subtle py-4 text-center">
       <p>&copy; Todos los derechos reservados</p>
