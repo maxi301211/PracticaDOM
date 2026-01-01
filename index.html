@@ -61,11 +61,11 @@
             etiquetas
           </li>
           <li>
-            <code>getElementByTagname('tag')</code> -> devuelve el primer
+            <code>querySelector('tag')</code> -> devuelve el primer
             elemento que coincide
           </li>
           <li>
-            <code>querySelectoAll('selector')</code> -> devuelve todos los que
+            <code>querySelectorAll('selector')</code> -> devuelve todos los que
             coinciden
           </li>
         </ul>
@@ -91,8 +91,8 @@
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">Hola Mundo</h5>
-                <button class="btn btn-warning w-100 mt-3">Cambiar titulo</button>
+                <h5 class="card-title" id="titulo">Hola Mundo</h5>
+                <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiar titulo</button>
                 <button class="btn btn-outline-warning w-100 mt-3">Cambiar titulo con innerHTML</button>
               </div>
             </div>
@@ -135,6 +135,6 @@
       <p>&copy; Todos los derechos reservados</p>
     </footer>
     <script src="/src/bootstrap.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./src/app.js"></script>
   </body>
 </html>
