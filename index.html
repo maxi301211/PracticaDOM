@@ -27,7 +27,31 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main class="container">
+      <section class="my-4 text-center">
+        <h1 class="display-4">Introducción al DOM con JavaScript</h1>
+        <p class="lead">El DOM es una representación del HTML como objetos de JavaScript. Nos permite modificar elementos en la pagina mientras se ejecuta</p>
+      </section>
+      <section>
+        <h2>Seleccion de elementos</h2>
+        <p>Metodos del elemeneto document</p>
+        <ul>
+          <li><code>getElementById('id')</code> -> selecciona por ID</li>
+          <li><code>getElementByClassName('clase')</code> -> selecciona por clase</li>
+          <li><code>getElementByTagname('tag')</code> -> devuelve por tipo de etiquetas</li>
+          <li><code>getElementByTagname('tag')</code> -> devuelve el primer elemento que coincide</li>
+          <li><code>querySelectoAll('selector')</code> -> devuelve todos los que coinciden</li>
+        </ul>
+        <h3>Modificar contenido</h3>
+        <ul>
+          <li><code>textContent</code> agrega un texto plano (más seguro)</li>
+          <li><code>innerHTML</code> interpreta HTML (vulnerable a xss si no se controla)</li>
+        </ul>
+        <h3>Manipular clases con classList</h3>
+        <p><code>classList</code> es una propiedad de los elementos DOM que permite trabajar facilmente con las clases CSS. Dvuelve un objeto con metodos utiles</p>
+      </section>
+      <!--TODO: Agrgar los etodos de classList-->
+    </main>
     <footer class="bg-dark-subtle py-4 text-center">
       <p>&copy; Todos los derechos reservados</p>
     </footer>
