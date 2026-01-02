@@ -29,15 +29,20 @@ const borrarTitulo = () => {
   }
 };
 
-const btnCambiartituloConinnerHTML = document.querySelector(
-  "#btnCambiarTituloConInnerHTML"
-);
+const mostrarNombre = (e) =>{
+  e.preventDefault()
+const parrafoNombre = document.querySelector('#parrafoNombre')
+const inputNombre = document.querySelector('input').value
+console.log(parrafoNombre)
+console.log(inputNombre)
+parrafoNombre.textContent += inputNombre
+}
+
+const btnCambiartituloConinnerHTML = document.querySelector("#btnCambiarTituloConInnerHTML");
 const btnBorrarTitulo = document.getElementById("btnBorrarTitulo");
+const formulario = document.querySelector('form')
 
 // agregar un manejador de eventos
-btnCambiartituloConinnerHTML.addEventListener(
-  "click",
-  modificarTituloConInnerHTML
-);
-
+btnCambiartituloConinnerHTML.addEventListener("click",modificarTituloConInnerHTML);
 btnBorrarTitulo.addEventListener("click", borrarTitulo);
+formulario.addEventListener('submit', mostrarNombre)
