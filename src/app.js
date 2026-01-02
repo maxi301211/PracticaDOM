@@ -25,24 +25,36 @@ const borrarTitulo = () => {
   const titulo = titulos[2];
   if (titulo) {
     titulo.remove();
-    btnBorrarTitulo.classList.add('disaled')
+    btnBorrarTitulo.classList.add("disaled");
   }
 };
 
-const mostrarNombre = (e) =>{
-  e.preventDefault()
-const parrafoNombre = document.querySelector('#parrafoNombre')
-const inputNombre = document.querySelector('input').value
-console.log(parrafoNombre)
-console.log(inputNombre)
-parrafoNombre.textContent += inputNombre
-}
+const mostrarNombre = (e) => {
+  e.preventDefault();
+  const parrafoNombre = document.querySelector("#parrafoNombre");
+  const inputNombre = document.querySelector("input").value;
+  console.log(parrafoNombre);
+  console.log(inputNombre);
+  parrafoNombre.textContent += inputNombre;
+};
 
-const btnCambiartituloConinnerHTML = document.querySelector("#btnCambiarTituloConInnerHTML");
+const changeTheme = () =>{
+  const btnChangeTheme = document.querySelector('#btnChangeTheme')
+  const html = document.documentElement
+  const themeActual = (html.getAttribute('data-bs-theme'))
+  html.setAttribute('data-bs-theme', themeActual === 'dark' ? 'light' : 'dark' )
+  themeActual === 'dark' ? btnChangeTheme.className = 'btn btn-outline-dark' : btnChangeTheme.className = 'btn btn-outline-light' 
+}
+const btnCambiartituloConinnerHTML = document.querySelector(
+  "#btnCambiarTituloConInnerHTML"
+);
 const btnBorrarTitulo = document.getElementById("btnBorrarTitulo");
-const formulario = document.querySelector('form')
+const formulario = document.querySelector("form");
 
 // agregar un manejador de eventos
-btnCambiartituloConinnerHTML.addEventListener("click",modificarTituloConInnerHTML);
+btnCambiartituloConinnerHTML.addEventListener(
+  "click",
+  modificarTituloConInnerHTML
+);
 btnBorrarTitulo.addEventListener("click", borrarTitulo);
-formulario.addEventListener('submit', mostrarNombre)
+formulario.addEventListener("submit", mostrarNombre);
