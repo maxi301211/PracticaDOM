@@ -99,23 +99,38 @@
               </thead>
               <tbody>
                 <tr class="table-active">
-                  <th scope="row"><code>element.classList.add('clase')</code></th>
+                  <th scope="row">
+                    <code>element.classList.add('clase')</code>
+                  </th>
                   <td>Añade una clase si no está presente</td>
                 </tr>
                 <tr>
-                  <th scope="row"><code>element.classList.remove('clase')</code></th>
+                  <th scope="row">
+                    <code>element.classList.remove('clase')</code>
+                  </th>
                   <td>Elimina una clase si está presente</td>
                 </tr>
                 <tr class="table-active">
-                  <th scope="row"><code>element.classList.toggle('clase')</code></th>
-                  <td>Alterna una clase: si está presente, la quita; si no está, la agrega</td>
+                  <th scope="row">
+                    <code>element.classList.toggle('clase')</code>
+                  </th>
+                  <td>
+                    Alterna una clase: si está presente, la quita; si no está,
+                    la agrega
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row"><code>element.classList.contains('clase')</code></th>
-                  <td>devuelve <code>true</code> si el elemento tiene la clase</td>
+                  <th scope="row">
+                    <code>element.classList.contains('clase')</code>
+                  </th>
+                  <td>
+                    devuelve <code>true</code> si el elemento tiene la clase
+                  </td>
                 </tr>
                 <tr class="table-active">
-                  <th scope="row"><code>element.classList.replace('vieja', 'nueva')</code></th>
+                  <th scope="row">
+                    <code>element.classList.replace('vieja', 'nueva')</code>
+                  </th>
                   <td>Reemplaza una clase existente por otra</td>
                 </tr>
               </tbody>
@@ -199,22 +214,24 @@
       </section>
       <section>
         <h3 class="display-6 text-center">Agregar tareas con js</h3>
-        <div>
+        <div class="container mt-4">
           <form>
-            <div class="d-flex my-4 flex-sm-column flex-md-column flex-lg-row">
-              <input
-                type="text"
-                class="form-control me-3"
-                placeholder="Ej: Terminar el tp de DOM y BOM"
-              />
-              <button type="submit" class="btn btn-success text-nowrap">
-                Agregar tarea
-              </button>
+            <div class="d-flex justify-content-center">
+              <div
+                class="w-75 my-4 d-flex align-items-center flex-sm-column flex-md-row flex-lg-row"
+              >
+                <input
+                  type="text"
+                  class="form-control me-3"
+                  placeholder="Ej: Terminar el tp de DOM y BOM"
+                />
+                <button type="submit" class="btn btn-success text-nowrap">
+                  Agregar tarea
+                </button>
+              </div>
             </div>
             <ul class="list-group mt-4 mb-5">
               <li class="list-group-item">tarea 1</li>
-              <li class="list-group-item">tarea 2</li>
-              <li class="list-group-item">tarea 3</li>
             </ul>
           </form>
         </div>
