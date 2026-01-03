@@ -33,7 +33,11 @@
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            <button class="btn btn-outline-light" id="btnChangeTheme" onclick="changeTheme()">
+            <button
+              class="btn btn-outline-light"
+              id="btnChangeTheme"
+              onclick="changeTheme()"
+            >
               <i class="bi bi-circle-half"></i>Cambiar de tema
             </button>
           </div>
@@ -61,8 +65,8 @@
             etiquetas
           </li>
           <li>
-            <code>querySelector('tag')</code> -> devuelve el primer
-            elemento que coincide
+            <code>querySelector('tag')</code> -> devuelve el primer elemento que
+            coincide
           </li>
           <li>
             <code>querySelectorAll('selector')</code> -> devuelve todos los que
@@ -92,8 +96,18 @@
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title" id="titulo">Hola Mundo</h5>
-                <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiar titulo</button>
-                <button class="btn btn-outline-warning w-100 mt-3" id="btnCambiarTituloConInnerHTML">Cambiar titulo con innerHTML</button>
+                <button
+                  class="btn btn-warning w-100 mt-3"
+                  onclick="modificarTitulo()"
+                >
+                  Cambiar titulo
+                </button>
+                <button
+                  class="btn btn-outline-warning w-100 mt-3"
+                  id="btnCambiarTituloConInnerHTML"
+                >
+                  Cambiar titulo con innerHTML
+                </button>
               </div>
             </div>
           </div>
@@ -101,7 +115,13 @@
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">ocultar elementos del HTML</h5>
-                <button class="btn btn-success w-100 mt-3" onclick="ocultarTexto()" id="btnOcultarTexto">Ocultar texto</button>
+                <button
+                  class="btn btn-success w-100 mt-3"
+                  onclick="ocultarTexto()"
+                  id="btnOcultarTexto"
+                >
+                  Ocultar texto
+                </button>
               </div>
             </div>
           </div>
@@ -110,7 +130,9 @@
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">eliminar elementos del HTML</h5>
-                <button class="btn btn-danger w-100 mt-3" id="btnBorrarTitulo">Borrar titulo</button>
+                <button class="btn btn-danger w-100 mt-3" id="btnBorrarTitulo">
+                  Borrar titulo
+                </button>
               </div>
             </div>
           </div>
@@ -119,15 +141,49 @@
               <div class="card-body">
                 <form>
                   <div class="mb-3">
-                    <label for="nombre" class="form-lael">Escribí tu nombre</label>
-                    <input type="text" class="form-control" placeholder="Ej: Maximo Cajal" minlength="2" maxlength="30" required id="nombre">
+                    <label for="nombre" class="form-lael"
+                      >Escribí tu nombre</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej: Maximo Cajal"
+                      minlength="2"
+                      maxlength="30"
+                      required
+                      id="nombre"
+                    />
                   </div>
-                  <button class="btn btn-primary mb-3 w-100" type="submit">Mostrar nombre</button>
-                  <p id="parrafoNombre">tu nombre es: </p>
+                  <button class="btn btn-primary mb-3 w-100" type="submit">
+                    Mostrar nombre
+                  </button>
+                  <p id="parrafoNombre">tu nombre es:</p>
                 </form>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <h3 class="display-6 text-center">Agregar tareas con js</h3>
+        <div>
+          <form>
+            <div class="d-flex my-4 flex-sm-column flex-md-column flex-lg-row">
+              <input
+                type="text"
+                class="form-control me-3"
+                placeholder="Ej: Terminar el tp de DOM y BOM"
+              />
+              <button type="submit" class="btn btn-success text-nowrap">
+                Agregar tarea
+              </button>
+            </div>
+            <ul class="list-group mt-4 mb-5">
+              <li class="list-group-item">tarea 1</li>
+              <li class="list-group-item">tarea 2</li>
+              <li class="list-group-item">tarea 3</li>
+            </ul>
+          </form>
         </div>
       </section>
     </main>
