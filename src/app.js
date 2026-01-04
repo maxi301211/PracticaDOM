@@ -45,11 +45,19 @@ const changeTheme = () =>{
   html.setAttribute('data-bs-theme', themeActual === 'dark' ? 'light' : 'dark' )
   themeActual === 'dark' ? btnChangeTheme.className = 'btn btn-outline-dark' : btnChangeTheme.className = 'btn btn-outline-light' 
 }
-const btnCambiartituloConinnerHTML = document.querySelector(
-  "#btnCambiarTituloConInnerHTML"
-);
+
+const agregarTarea = (e) => {
+  e.preventDefault();
+  const inputTarea = document.querySelector('#inputTarea').value
+  const lista = document.querySelector('.list-group')
+  lista.innerHTML += `<li class="list-group-item">${inputTarea}</li>`
+  tareaForm.reset()
+}
+
+const btnCambiartituloConinnerHTML = document.querySelector("#btnCambiarTituloConInnerHTML");
 const btnBorrarTitulo = document.getElementById("btnBorrarTitulo");
 const formulario = document.querySelector("form");
+const tareaForm = document.querySelector('#tareaForm')
 
 // agregar un manejador de eventos
 btnCambiartituloConinnerHTML.addEventListener(
@@ -58,3 +66,5 @@ btnCambiartituloConinnerHTML.addEventListener(
 );
 btnBorrarTitulo.addEventListener("click", borrarTitulo);
 formulario.addEventListener("submit", mostrarNombre);
+tareaForm.addEventListener('submit', agregarTarea)
+

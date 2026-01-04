@@ -215,7 +215,7 @@
       <section>
         <h3 class="display-6 text-center">Agregar tareas con js</h3>
         <div class="container mt-4">
-          <form>
+          <form id="tareaForm">
             <div class="d-flex justify-content-center">
               <div
                 class="w-75 my-4 d-flex align-items-center flex-sm-column flex-md-row flex-lg-row"
@@ -224,16 +224,18 @@
                   type="text"
                   class="form-control me-3"
                   placeholder="Ej: Terminar el tp de DOM y BOM"
+                  id="inputTarea"
+                  minlength="3"
+                  maxlength="300"
+                  required
                 />
                 <button type="submit" class="btn btn-success text-nowrap">
                   Agregar tarea
                 </button>
               </div>
             </div>
-            <ul class="list-group mt-4 mb-5">
-              <li class="list-group-item">tarea 1</li>
-            </ul>
           </form>
+          <ul class="list-group mt-4 mb-5"></ul>
         </div>
       </section>
     </main>
