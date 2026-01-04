@@ -54,6 +54,18 @@ const agregarTarea = (e) => {
   tareaForm.reset()
 }
 
+const agregarTareaCreateElement = (e) => {
+  e.preventDefault();
+  const inputTarea = document.querySelector('#inputTarea').value
+  const lista = document.querySelector('.list-group')
+  const li = document.createElement('li')
+  li.textContent = tareaForm
+  li.classList.add('list-group-item')
+  lista.appendChild(li)
+  tareaForm.reset()
+}
+
+
 const btnCambiartituloConinnerHTML = document.querySelector("#btnCambiarTituloConInnerHTML");
 const btnBorrarTitulo = document.getElementById("btnBorrarTitulo");
 const formulario = document.querySelector("form");
