@@ -38,38 +38,55 @@ const mostrarNombre = (e) => {
   parrafoNombre.textContent += inputNombre;
 };
 
-const changeTheme = () =>{
-  const btnChangeTheme = document.querySelector('#btnChangeTheme')
-  const html = document.documentElement
-  const themeActual = (html.getAttribute('data-bs-theme'))
-  html.setAttribute('data-bs-theme', themeActual === 'dark' ? 'light' : 'dark' )
-  themeActual === 'dark' ? btnChangeTheme.className = 'btn btn-outline-dark' : btnChangeTheme.className = 'btn btn-outline-light' 
-}
+const changeTheme = () => {
+  const btnChangeTheme = document.querySelector("#btnChangeTheme");
+  const html = document.documentElement;
+  const themeActual = html.getAttribute("data-bs-theme");
+  html.setAttribute("data-bs-theme", themeActual === "dark" ? "light" : "dark");
+  themeActual === "dark"
+    ? (btnChangeTheme.className = "btn btn-outline-dark")
+    : (btnChangeTheme.className = "btn btn-outline-light");
+};
 
 const agregarTarea = (e) => {
   e.preventDefault();
-  const inputTarea = document.querySelector('#inputTarea').value
-  const lista = document.querySelector('.list-group')
-  lista.innerHTML += `<li class="list-group-item">${inputTarea}</li>`
-  tareaForm.reset()
-}
+  const inputTarea = document.querySelector("#inputTarea").value;
+  const lista = document.querySelector(".list-group");
+  lista.innerHTML += `<li class="list-group-item">${inputTarea}</li>`;
+  tareaForm.reset();
+};
 
 const agregarTareaCreateElement = (e) => {
   e.preventDefault();
-  const inputTarea = document.querySelector('#inputTarea').value
-  const lista = document.querySelector('.list-group')
-  const li = document.createElement('li')
-  li.textContent = tareaForm
-  li.classList.add('list-group-item')
-  lista.appendChild(li)
-  tareaForm.reset()
+  const inputTarea = document.querySelector("#inputTarea").value;
+  const lista = document.querySelector(".list-group");
+  const li = document.createElement("li");
+  li.textContent = tareaForm;
+  li.classList.add("list-group-item");
+  lista.appendChild(li);
+  tareaForm.reset();
+};
+
+const saludar = () => {
+  const tituloSaludo = document.getElementById("saludo");
+  tituloSaludo.classList.remove("d-none");
+};
+
+const obtenerFecha = () => {
+  const fecha = new Date()
+  const horaTitulo = document.getElementById('hora')
+  const hora = fecha.getHours()<10 ? '0'+fecha.getHours():fecha.getHours()
+  const minutos = fecha.getMinutes()<10 ? '0'+fecha.getMinutes():fecha.getMinutes()
+  const segundos = fecha.getSeconds()<10 ? '0'+fecha.getSeconds():fecha.getSeconds()
+  horaTitulo.textContent =  `${hora}:${minutos}:${segundos}`
 }
 
-
-const btnCambiartituloConinnerHTML = document.querySelector("#btnCambiarTituloConInnerHTML");
+const btnCambiartituloConinnerHTML = document.querySelector(
+  "#btnCambiarTituloConInnerHTML"
+);
 const btnBorrarTitulo = document.getElementById("btnBorrarTitulo");
 const formulario = document.querySelector("form");
-const tareaForm = document.querySelector('#tareaForm')
+const tareaForm = document.querySelector("#tareaForm");
 
 // agregar un manejador de eventos
 btnCambiartituloConinnerHTML.addEventListener(
@@ -78,5 +95,22 @@ btnCambiartituloConinnerHTML.addEventListener(
 );
 btnBorrarTitulo.addEventListener("click", borrarTitulo);
 formulario.addEventListener("submit", mostrarNombre);
-tareaForm.addEventListener('submit', agregarTarea)
+tareaForm.addEventListener("submit", agregarTarea);
 
+// manejo del tiempo
+// setTimeout
+
+setTimeout(saludar, 3000);
+
+// setInterval
+// let contador = 1;
+// const idinterval = setInterval(() => {
+//   document.writeln("<p>Hola Mundo</p>");
+//   if(contador === 10){
+//     clearInterval(idinterval)
+//   }
+//   contador++
+// }, 5000);
+
+
+setInterval(obtenerFecha, 1000)
